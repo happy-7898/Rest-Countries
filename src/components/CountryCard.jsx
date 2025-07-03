@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router';
 const CountryCard = ({country}) => {
   const {isDark}=useContext(context);
   const navigate=useNavigate();
+  let capital=country["capital"].toLocaleString();
+  capital=capital.length>15?`${capital.slice(0,15)}...`:capital
+
 
   function navigationHandler(){
     navigate(`/${country["name"]["common"]}`)
@@ -20,7 +23,7 @@ const CountryCard = ({country}) => {
       <div className='ml-4 text-[18px] font-[300]'>
         <p>Population : <span className='text-[16px] font-extralight'>{country["population"].toLocaleString()}</span></p>
         <p>Region : <span className='text-[16px] font-extralight'>{country["region"]}</span></p>
-        <p>Captial : <span className='text-[16px] font-extralight'>{country["capital"]}</span></p>
+        <p>Captial : <span className='text-[16px] font-extralight'>{capital}</span></p>
       </div>
     </div>
   )
