@@ -7,6 +7,7 @@ import { filterByRegion } from "./utils/filterByRegion.js";
 import { countryDetails } from "./utils/countryDetails.js";
 import { mapShortNames } from "./utils/mapShortNames.js";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -63,9 +64,7 @@ const App = () => {
 
   return (
     <context.Provider value={contextValues}>
-      <div>
         <RouterProvider router={router}></RouterProvider>
-      </div>
     </context.Provider>
   );
 };

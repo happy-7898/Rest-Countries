@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import Navbar from "../components/Navbar";
 import CountryDetail from "../components/CountryDetail";
 import { GoArrowLeft } from "react-icons/go";
@@ -15,6 +15,10 @@ const CountryDetailed = () => {
   function navigationHandler(){
     navigate("/");
   }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
   return (
     <div>
