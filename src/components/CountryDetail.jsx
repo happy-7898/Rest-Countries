@@ -40,8 +40,8 @@ const CountryDetail = ({ countryName }) => {
         <div className=" h-[100%] w-[100%] max-w-[450px] md:max-w-[600px] lg:max-w-[1300px] lg:flex lg:gap-18 lg:w-[100%] lg:h-[450px] md:gap-12  2xl:gap-30 2xl:max-w-[1400px] ">
           <div className=" flex justify-center mb-6 lg:w-[48%] md:w-[100%]">
             <img
-              src={country["flags"]["svg"]}
-              className="w-[100%] max-w-[450px] md:w-[100%] md:h-[100%] md:object-contain md:max-w-[600px] lg:w-full lg:h-full  lg:object-contain lg:max-w-[560px]"
+              src={country["flags"]["png"]}
+              className="w-[100%] max-w-[450px] md:w-[100%] md:h-[100%] md:max-w-[600px] lg:w-[100%] lg:h-[100%]  lg:object-fill "
             ></img>
           </div>
 
@@ -53,17 +53,17 @@ const CountryDetail = ({ countryName }) => {
             </div>
             <div className="flex flex-col gap-8 pb-4 text-sm lg:flex-row lg:justify-between md:flex-row md:gap-7 md:pb-1">
               <div className="lg:flex lg:flex-col lg:gap-1">
-                <p>
+                <p className="text-[18px] font-[300]">
                   Native Name:<span className="text-[16px] font-extralight"> {nativeName}</span>
                 </p>
-                <p>
+                <p className="text-[18px] font-[300]">
                   Population:
                   <span className="text-[16px] font-extralight"> {country["population"].toLocaleString()}</span>
                 </p>
-                <p>
+                <p className="text-[18px] font-[300]">
                   Region:<span className="text-[16px] font-extralight"> {country["region"]}</span>
                 </p>
-                <p>
+                <p className="text-[18px] font-[300]">
                   Sub Region:<span className="text-[16px] font-extralight"> {country["subregion"]}</span>
                 </p>
                 <p>
@@ -72,13 +72,13 @@ const CountryDetail = ({ countryName }) => {
               </div>
 
               <div className="lg:flex lg:flex-col lg:gap-1">
-                <p>
+                <p className="text-[18px] font-[300]">
                   Top Level Domain:<span className="text-[16px] font-extralight"> {country["tld"]}</span>
                 </p>
-                <p>
+                <p className="text-[18px] font-[300]">
                   Currencies:<span className="text-[16px] font-extralight"> {currencies}</span>
                 </p>
-                <p>
+                <p className="text-[18px] font-[300]">
                   Languages:<span className="text-[16px] font-extralight"> {languages}</span>
                 </p>
               </div>

@@ -14,13 +14,13 @@ const CountryCard = ({country}) => {
   return (
     <div onClick={navigationHandler} className={`w-[100%] max-h-[372px] max-w-[280px] md:max-w-[276px] lg:max-w-[272px] flex flex-col gap-4  rounded-md pb-10 shadow-sm
     ${isDark?"bg-[var(--dark-blue-elements)] text-white":"bg-white"}`}>
-      <img src={country["flags"]["png"]} className='rounded-t-md h-[172px] w-[100%] object-cover'></img>
+      <img src={country["flags"]["png"]} className='rounded-t-md h-[172px] w-[100%] object-fill'></img>
       <p className='ml-4 font-[600] '>{country["name"]["common"]}</p>
 
       <div className='ml-4 text-[18px] font-[300]'>
-        <p>Population : <span>{country["population"].toLocaleString()}</span></p>
-        <p>Region : <span>{country["region"]}</span></p>
-        <p>Captial : <span>{country["capital"]}</span></p>
+        <p>Population : <span className='text-[16px] font-extralight'>{country["population"].toLocaleString()}</span></p>
+        <p>Region : <span className='text-[16px] font-extralight'>{country["region"]}</span></p>
+        <p>Captial : <span className='text-[16px] font-extralight'>{country["capital"]}</span></p>
       </div>
     </div>
   )
