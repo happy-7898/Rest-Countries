@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import { useNavigate } from "react-router";
 
 const CountryDetail = ({ countryName }) => {
+  console.log(countryName);
   const { loading, isDark, countryData,shortNames } = useContext(context);
   let country;
   let nativeName;
@@ -13,10 +14,11 @@ const CountryDetail = ({ countryName }) => {
 
   if (!loading) {
     country = countryData.get(countryName);
+    console.log(country)
     nativeName = Object.keys(country["name"]["nativeName"]);
     nativeName = country["name"]["nativeName"][nativeName[0]]["official"];
-    currencies =
-      country["currencies"][Object.keys(country["currencies"])[0]]["name"];
+    const currencyKeys = Object.keys(country["currencies"]);
+    const currencies = currencyKeys.length > 0 ? country["currencies"][currencyKeys[0]]["name"] : "";
     languages = Object.keys(country["languages"])
       .map((curr) => country["languages"][curr])
       .join(",");
