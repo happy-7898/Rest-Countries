@@ -1,20 +1,17 @@
-import React, { useContext } from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBar'
 import SearchBar from '../components/SearchBar'
-import CountriesCard from '../components/CountriesCard'
+import Countries from '../components/Countries'
+import { useContext } from 'react'
 import { context } from '../App'
-import Loader from '../components/Loader'
-
 
 const HomePage = () => {
-    const {data,isDark}=useContext(context);
+  const {isDark}=useContext(context);
 
   return (
-    <div>
+    <div className={`h-screen w-full ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
       <Navbar></Navbar>
       <SearchBar></SearchBar>
-      <CountriesCard></CountriesCard>
-      
+      <Countries></Countries>
     </div>
   )
 }

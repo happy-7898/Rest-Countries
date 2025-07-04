@@ -1,6 +1,6 @@
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { fetchData, fetchShortNames } from "./utils/fetchData";
-import CountryDetailed from "./pages/CountryDetailed";
+import CountryDetailed from "./pages/CountryDetailsPage.jsx";
 import HomePage from "./pages/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { filterByRegion } from "./utils/filterByRegion.js";

@@ -1,6 +1,6 @@
-import React, { useContext,useEffect } from "react";
-import Navbar from "../components/Navbar";
-import CountryDetail from "../components/CountryDetail";
+import { useContext} from "react";
+import Navbar from "../components/NavBar";
+import CountryDetail from "../components/CountryDetails";
 import { GoArrowLeft } from "react-icons/go";
 import { context } from "../App";
 import { useNavigate, useParams } from "react-router";
@@ -16,12 +16,10 @@ const CountryDetailed = () => {
     navigate("/");
   }
 
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
+  
 
   return (
-    <div>
+    <div className={`h-screen ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
       <Navbar></Navbar>
       <div className={`py-7 px-6 relative lg:px-14 lg:py-12 md:px-11 ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
         <GoArrowLeft className={`absolute text-xl left-10 top-8 lg:left-18 lg:top-13 md:left-14 ${isDark?"text-white":""}`} />
