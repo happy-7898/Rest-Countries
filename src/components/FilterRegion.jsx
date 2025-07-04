@@ -28,7 +28,7 @@ const FilterRegion = ({ setSelectFilter }) => {
   return (
     <div className={`relative w-[184px] h-8 lg:h-10 m:h-9 shadow-[0_0_8px_0_rgba(0,0,0,0.2)] rounded px-4 py-2 text-xs mb-5 cursor-pointer
       ${isDark ? "bg-[var(--dark-blue-elements)] text-white" : "bg-white text-black"}`} >
-      <div className="flex justify-between items-center pt-1" onClick={toggleDropdown}>
+      <div className="flex justify-between items-center m:pt-1" onClick={toggleDropdown}>
         <span>{filterValue}</span>
         <MdKeyboardArrowDown size={18} />
       </div>
