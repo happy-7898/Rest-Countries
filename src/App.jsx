@@ -22,7 +22,6 @@ const router = createBrowserRouter([
 const context = createContext();
 
 const App = () => {
-
   const [data,setData]=useState(null);
   const [isDark,setIsDark]=useState(true);
   const [filteredData,setFilteredData]=useState(null);
@@ -44,7 +43,6 @@ const App = () => {
   }
 
   useEffect(() => {
-
     Promise.all([fetchData(),fetchShortNames()])
     .then(([countries,shortCountryNames])=>{
       setData(countries)
@@ -55,12 +53,7 @@ const App = () => {
       setLoading(false);
     })
     .catch((e)=>console.log(e));
-
-    
-
-
   }, []);
-
 
   return (
     <context.Provider value={contextValues}>

@@ -1,5 +1,3 @@
-import arrow_white from '../assets/arrow_white.png'
-import arrow_black from '../assets/arrow_black.png'
 import { CiSearch } from "react-icons/ci";
 import { useContext } from 'react';
 import { context } from '../App';
@@ -16,13 +14,9 @@ const SearchBar = () => {
     setInputValue(value);
   }
 
-  function filterHandler(e){
-    setFilterValue(e.target.value);
-  }
-
   useEffect(()=>{
     let tempData=data;
-
+    
     if(filterValue){
       tempData=filteredByRegion[filterValue];
     }

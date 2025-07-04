@@ -1,5 +1,3 @@
-import React from "react";
-
 const CountryFlag = ({ flagUrl }) => (
   <div className="flex justify-center mb-6 lg:w-full md:w-[100%] lg:max-w-[650px]">
     <img

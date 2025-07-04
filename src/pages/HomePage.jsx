@@ -9,9 +9,9 @@ const HomePage = () => {
 
   return (
     <div className={`h-screen w-full ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
-      <Navbar></Navbar>
-      <SearchBar></SearchBar>
-      <Countries></Countries>
+      <Navbar/>
+      <SearchBar/>
+      <Countries/>
     </div>
   )
 }
