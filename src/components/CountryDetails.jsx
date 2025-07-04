@@ -21,24 +21,24 @@ const CountryDetail = ({ countryName }) => {
   return (
     <div className={`w-full px-6 py-6 flex flex-col items-center lg:py-0 lg:px-[5%]  md:px-11 ${isDark? "bg-[var(--very-dark-blue-bg)] text-white": "bg-[var(--very-light-gray-bg)]"}`}>
       {loading ? (
-          <Loader />
-        ) : (
-          <div className="w-full max-w-md md:max-w-150 lg:max-w-400 lg:flex lg:gap-18 lg:h-full md:gap-12 2xl:gap-30 ">
-            <CountryFlag flagUrl={country.flags.svg} />
-            <div className="flex flex-col gap-5 md:gap-6 md:w-full max-w-187">
-              <CountryInfoSection
-                country={country}
-                nativeName={nativeName}
-                currencies={currencies}
-                languages={languages}
-              />
-              <BorderCountries
-                borders={country.borders}
-                shortNames={shortNames}
-                isDark={isDark}
-              />
-            </div>
+        <Loader />
+      ) : (
+        <div className="w-full max-w-md md:max-w-150 lg:max-w-400 lg:flex lg:gap-18 lg:h-full md:gap-12 2xl:gap-30 ">
+          <CountryFlag flagUrl={country.flags.svg} />
+          <div className="flex flex-col gap-5 md:gap-6 md:w-full max-w-187">
+            <CountryInfoSection
+              country={country}
+              nativeName={nativeName}
+              currencies={currencies}
+              languages={languages}
+            />
+            <BorderCountries
+              borders={country.borders}
+              shortNames={shortNames}
+              isDark={isDark}
+            />
           </div>
+        </div>
       )}
     </div>
   );

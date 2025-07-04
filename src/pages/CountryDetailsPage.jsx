@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import Navbar from "../components/NavBar";
 import CountryDetail from "../components/CountryDetails";
 import { GoArrowLeft } from "react-icons/go";
@@ -6,27 +6,27 @@ import { context } from "../App";
 import { useNavigate, useParams } from "react-router";
 
 const CountryDetailed = () => {
-    const {isDark}=useContext(context);
-    let params=useParams();
-    let countryName=params.countryName;
-    const navigate=useNavigate();
+  const { isDark }=useContext(context);
+  let params=useParams();
+  let countryName=params.countryName;
+  const navigate=useNavigate();
 
-    function navigationHandler(){
-      navigate("/");
-    }
+  function navigationHandler() {
+    navigate("/");
+  }
 
-    return (
-      <div className={`h-screen ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
-        <Navbar/>
-        <div className={`py-7 px-6 relative lg:px-14 lg:py-12 md:px-11 ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
-          <GoArrowLeft className={`absolute text-xl left-10 top-8 lg:left-18 lg:top-13 md:left-14 ${isDark?"text-white":""}`} />
-          <button onClick={navigationHandler} className={`w-23 h-7 pl-5.5 shadow-[0_0_8px_0_rgba(0,0,0,0.2)] ${isDark?"bg-[var(--dark-blue-elements)] text-white":""}`}>
-            Back
-          </button>
-        </div>
-        <CountryDetail countryName={countryName}/>
+  return (
+    <div className={`h-screen ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
+      <Navbar />
+      <div className={`py-7 px-6 relative lg:px-14 lg:py-12 md:px-11 ${isDark?"bg-[var(--very-dark-blue-bg)]":"bg-[var(--very-light-gray-bg)]"}`}>
+        <GoArrowLeft className={`absolute text-xl left-10 top-8 lg:left-18 lg:top-13 md:left-14 ${isDark?"text-white":""}`} />
+        <button onClick={navigationHandler} className={`w-23 h-7 pl-5.5 shadow-[0_0_8px_0_rgba(0,0,0,0.2)] ${isDark?"bg-[var(--dark-blue-elements)] text-white":""}`}>
+          Back
+        </button>
       </div>
-    );
+      <CountryDetail countryName={countryName} />
+    </div>
+  );
 };
 
 export default CountryDetailed;

@@ -7,15 +7,14 @@ import { filterByRegion } from "./utils/filterByRegion.js";
 import { countryDetails } from "./utils/countryDetails.js";
 import { mapShortNames } from "./utils/mapShortNames.js";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage></HomePage>,
+    element: <HomePage />,
   },
   {
     path: "/:countryName",
-    element: <CountryDetailed></CountryDetailed>,
+    element: <CountryDetailed />,
   },
 ]);
 
@@ -39,28 +38,28 @@ const App = () => {
     filteredData,
     filteredByRegion,
     countryData,
-    shortNames
-  }
+    shortNames,
+  };
 
   useEffect(() => {
     Promise.all([fetchData(),fetchShortNames()])
-    .then(([countries,shortCountryNames])=>{
-      setData(countries)
-      setFilteredData(countries);
-      setFilteredByRegion(filterByRegion(countries))
-      setCountryData(countryDetails(countries))
-      setShortNames(mapShortNames(shortCountryNames));
-      setLoading(false);
-    })
-    .catch((e)=>console.log(e));
+      .then(([countries,shortCountryNames])=>{
+        setData(countries);
+        setFilteredData(countries);
+        setFilteredByRegion(filterByRegion(countries));
+        setCountryData(countryDetails(countries));
+        setShortNames(mapShortNames(shortCountryNames));
+        setLoading(false);
+      })
+      .catch((e)=>console.log(e));
   }, []);
 
   return (
     <context.Provider value={contextValues}>
-        <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router} />
     </context.Provider>
   );
 };
 
 export default App;
-export {context}
+export { context };
