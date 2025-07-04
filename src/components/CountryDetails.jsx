@@ -23,9 +23,9 @@ const CountryDetail = ({ countryName }) => {
       {loading ? (
           <Loader />
         ) : (
-          <div className="w-full max-w-[450px] md:max-w-[600px] lg:max-w-[1600px] lg:flex lg:gap-18 lg:h-full md:gap-12 2xl:gap-30 ">
-            <CountryFlag flagUrl={country.flags.png} />
-            <div className="flex flex-col gap-5 md:gap-6 md:w-full max-w-[750px]">
+          <div className="w-full max-w-md md:max-w-150 lg:max-w-400 lg:flex lg:gap-18 lg:h-full md:gap-12 2xl:gap-30 ">
+            <CountryFlag flagUrl={country.flags.svg} />
+            <div className="flex flex-col gap-5 md:gap-6 md:w-full max-w-187">
               <CountryInfoSection
                 country={country}
                 nativeName={nativeName}

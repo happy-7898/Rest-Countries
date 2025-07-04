@@ -14,9 +14,9 @@ const CountryCard = ({country}) => {
   }
 
   return (
-    <div onClick={navigationHandler} className={`w-full max-h-[372px] max-w-[280px] md:max-w-[276px] lg:max-w-[272px] flex flex-col gap-4  rounded-md pb-10 shadow-sm
+    <div onClick={navigationHandler} className={`w-full max-h-93 max-w-70 md:max-w-64 lg:max-w-55 flex flex-col gap-4  rounded-md pb-10 shadow-sm
       2xl:h-80 2xl:w-60 2xl:max-h-none 2xl:max-w-none ${isDark?"bg-[var(--dark-blue-elements)] text-white":"bg-white"}`}>
-      <img src={country["flags"]["png"]} className='rounded-t-md h-[172px] w-full object-fill'></img>
+      <img src={country["flags"]["png"]} className='rounded-t-md h-43 w-full object-fill'></img>
       <p className='ml-4 font-bold '>{name.slice(0,20)}</p>
       <div className='ml-4 text-sm font-semibold'>
         <p>Population : <span className='font-extralight'>{country["population"].toLocaleString()}</span></p>
