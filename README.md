@@ -29,8 +29,8 @@ To get a local copy up and running, follow these simple steps:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://gitlab.com/Harpreet7/rest-countries.git
-    cd rest-countries
+    git clone https://github.com/happy-7898/Rest-Countries.git
+    cd Rest-Countries
     ```
 
 2.  **Install dependencies:**
